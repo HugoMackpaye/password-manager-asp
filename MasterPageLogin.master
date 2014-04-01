@@ -27,7 +27,7 @@
 <body>
     <form id="form1" runat="server">
 
-        <div class="container">
+       <div class="form-signin">
 
                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
@@ -35,7 +35,7 @@
 
 
      
-    </div> <!-- /container -->
+   </div> <!-- /container -->
 
     </form>
 </body>
