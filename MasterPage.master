@@ -28,7 +28,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -37,17 +37,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
+    
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Password Manager</a>
         </div>
         <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        
+            
+    <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
+    </asp:Menu>
+         
         </div><!--/.nav-collapse -->
+    
       </div>
+
     </div>
 
     <div class="container">
@@ -58,7 +61,7 @@
     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-     
+         <asp:AccessDataSource ID="AccessDataSource1" runat="server"></asp:AccessDataSource>
         </asp:ContentPlaceHolder>
     
          </div>
