@@ -44,8 +44,17 @@
         <div class="collapse navbar-collapse">
         
             
-    <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
-    </asp:Menu>
+    
+      <asp:Menu ID="Menu1" DataSourceID="SiteMapDataSource1" runat="server" 
+               StaticDisplayLevels="2" Orientation="Horizontal" 
+               StaticMenuItemStyle-CssClass="menunode"
+               StaticEnableDefaultPopOutImage="False"   
+               StaticHoverStyle-ForeColor="White" StaticSelectedStyle-ForeColor="#88a4f8" ForeColor="white" Style="padding-top:15px"
+              StaticMenuItemStyle-HorizontalPadding="30"     
+             
+               >
+            </asp:Menu>
+
          
         </div><!--/.nav-collapse -->
     

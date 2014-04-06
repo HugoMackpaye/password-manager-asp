@@ -1,14 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-    <siteMapNode url="AccountOverview.aspx" title="Overview of my accounts"  description="">
-        
-        <siteMapNode url="ManageAccount.aspx" title=" Manage my account"  description="" >
-            <siteMapNode url="AccountDetail.aspx" title="The detail of my account"  description="" >
-                <siteMapNode url="AccountEdit.aspx" title="Edit my account"  description="" >   
-            </siteMapNode>
-        <siteMapNode url="AccountCreate.aspx" title="The detail of my account"  description="" />
-        </siteMapNode>
+    <siteMapNode url="user/Home.aspx" title="Home"  description="" >
+        <siteMapNode url="user/AccountOverview.aspx" title="Overview"  description="" />
+        <siteMapNode url="user/ManageAccount.aspx" title="Manage my account"  description="" />
+        <siteMapNode url="user/About.aspx" title="About"  description="" />
+        <siteMapNode url="user/ContactUs.aspx" title="Contact us"  description="" />
     </siteMapNode>
-    </siteMapNode>  
-    
 </siteMap>
+
+
+

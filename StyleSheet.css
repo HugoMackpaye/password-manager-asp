@@ -1,18 +1,27 @@
 ﻿body {
   padding-top: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
 }
 .starter-template {
   padding: 40px 15px;
   text-align: center;
 }
 
-body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #eee;
-}
 
-.form-signin {
+#left
+{  
+    position: relative;
+    width:50%;
+    float:left;
+    background-color:50%;
+    float:left;
+    text-align:left;
+       
+}
+    
+.form-signin .form-group {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
@@ -46,3 +55,20 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+input
+{
+    width:100px;
+   
+    left:25%;
+}
+
+
+#form-contact 
+{
+    position: relative;
+    width:50%;
+     float:left;
+     left:25%;
+}
+
