@@ -25,8 +25,9 @@ On this app you can store all your password but also some information about each
 <br />
 <br />
 <a href="ManageAccount.aspx"><button type="button" class="btn btn-default btn-lg">
-  <span class="glyphicon glyphicon-user"></span> Manage my account settings
+  <span class="glyphicon glyphicon-cog"></span> Manage my account settings
 </button>
+</a>
 <br />
 <br />
 
