@@ -24,11 +24,13 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
 </head>
 <body>
     <form id="form1" runat="server">
-    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+    
+    <asp:SiteMapDataSource ID="UserSiteMapDataSource" runat="server" SiteMapProvider="UserSitemap" />
+    <asp:SiteMapDataSource ID="AdminSiteMapDataSource" runat="server" SiteMapProvider="AdminSitemap" />
+
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -38,16 +40,50 @@
         <div class="collapse navbar-collapse">
         
             
-    
-      <asp:Menu ID="Menu1" DataSourceID="SiteMapDataSource1" runat="server" 
+    <asp:LoginView ID="LoginView2" runat="server">
+        
+                             
+                <RoleGroups>
+
+
+                  <asp:RoleGroup Roles="user">
+                     <ContentTemplate>
+                        <asp:Menu ID="MenuUser" DataSourceID="UserSiteMapDataSource" runat="server" 
                StaticDisplayLevels="2" Orientation="Horizontal" 
                StaticMenuItemStyle-CssClass="menunode"
                StaticEnableDefaultPopOutImage="False"   
                StaticHoverStyle-ForeColor="White" StaticSelectedStyle-ForeColor="#88a4f8" ForeColor="white" Style="padding-top:15px"
-              StaticMenuItemStyle-HorizontalPadding="30"     
-             
-               >
-            </asp:Menu>
+              StaticMenuItemStyle-HorizontalPadding="30" >
+
+            </asp:Menu>     
+                     </ContentTemplate>
+                  </asp:RoleGroup>
+
+                  <asp:RoleGroup Roles="admin">
+                     <ContentTemplate>
+                         <asp:Menu ID="MenuAdmin" DataSourceID="AdminSiteMapDataSource" runat="server" 
+               StaticDisplayLevels="2" Orientation="Horizontal" 
+               StaticMenuItemStyle-CssClass="menunode"
+               StaticEnableDefaultPopOutImage="False"   
+               StaticHoverStyle-ForeColor="White" StaticSelectedStyle-ForeColor="#88a4f8" ForeColor="white" Style="padding-top:15px"
+              StaticMenuItemStyle-HorizontalPadding="30" >
+
+            </asp:Menu>     
+                     </ContentTemplate>
+                  </asp:RoleGroup>
+
+               </RoleGroups>
+
+               
+
+
+
+             </asp:LoginView>
+
+
+            <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="menunode">
+        </asp:LoginStatus>
+
 
          
         </div><!--/.nav-collapse -->
