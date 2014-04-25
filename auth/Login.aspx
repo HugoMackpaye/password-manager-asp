@@ -6,7 +6,7 @@
     <p>User: admin, PW: 123456789, Role: admin</p>
 
    <asp:Login ID="Login1" runat="server" Font-Names="Verdana"  
-        Font-Size="10pt" DestinationPageUrl="~/user/Home.aspx" 
+        Font-Size="10pt" DestinationPageUrl="~/Default.aspx" 
         DisplayRememberMe="False">
       <TitleTextStyle BackColor="#6B696B" Font-Bold="True" ForeColor="#FFFFFF" />
    </asp:Login> 
