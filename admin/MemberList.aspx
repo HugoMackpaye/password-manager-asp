@@ -5,14 +5,20 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     <h1>Member list</h1>
-     <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
+
+    <asp:PlaceHolder ID="DeleteSuccess" runat="server" Visible="false">
+        <div class="alert alert-success">User has been deleted!</div>
+    </asp:PlaceHolder>
+
+
+     <asp:ListView ID="UsersListView" runat="server" DataSourceID="SqlDataSource1">
 
       <ItemTemplate>
       <tr>
         <td><%# Eval("UserName") %></td>
         <td><%# Eval("RoleName") %></td>
         <td><%# Eval("LastActivityDate") %></td>
-        <td><a href="EditUser.aspx?userId=<%# Eval("UserId") %>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+        <td><a href="EditUser.aspx?user=<%# Eval("UserName") %>"><span class="glyphicon glyphicon-pencil"></span></a></td>
          
         <td><asp:LinkButton ID="LinkButtonDelete" OnCommand="UserDelete" CommandArgument=<%# Eval("UserId") %> runat="server" CommandName="UserId"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton></td>
       </tr>

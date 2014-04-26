@@ -3,17 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
+<h1>Edit user</h1>
+    <asp:PlaceHolder ID="UpdateSuccess" runat="server" Visible="false">
+        <div class="alert alert-success">User has been deleted!</div>
+    </asp:PlaceHolder>
 <table>           
     <tr>
         <td align="right">
             <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" 
-                ControlToValidate="UserName" ErrorMessage="User Name is required." 
-                ToolTip="User Name is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
+            <asp:TextBox ID="UserName" Enabled="false" runat="server"></asp:TextBox>
         </td>
     </tr>
     <tr>
@@ -101,6 +101,6 @@
         </td>
     </tr>
 </table>
-
+<asp:Button ID="BtnSave" runat="server" Text="Save" />
 </asp:Content>
 
