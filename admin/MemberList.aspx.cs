@@ -11,7 +11,10 @@ public partial class admin_memberList : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!IsPostBack)
+        {
+            DeleteSuccess.Visible = false;
+        }
     }
 
     protected void UserEdit(Object sender, CommandEventArgs e)
@@ -21,10 +24,15 @@ public partial class admin_memberList : System.Web.UI.Page
 
     protected void UserDelete(Object sender, CommandEventArgs e)
     {
+        DeleteConfirm.Visible = true;
+        LinkButtonDelete2.CommandArgument = e.CommandArgument.ToString();
+        LinkButtonDelete2.CommandName = e.CommandName.ToString();
 
+    }
+    protected void UserDelete2(Object sender, CommandEventArgs e)
+    {
         string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection con = new SqlConnection(dbstring);
-        
         
         con.Open();
 
@@ -47,6 +55,10 @@ public partial class admin_memberList : System.Web.UI.Page
 
         // Close the connection to the database
         con.Close();
+
+        DeleteSuccess.Visible = true;
+        DeleteConfirm.Visible = false;
+        UsersListView.DataBind();
     }
 
 }
