@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
 Add an account :
-<form class="form-horizontal" role="form">
+
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Name of the account</label> <asp:TextBox ID="TextBox1" runat="server"  type="Text"></asp:TextBox>
   </div><div class="form-group">
@@ -19,8 +19,9 @@ Add an account :
     </div><div class="form-group">
     <asp:TextBox ID="TextBox5" runat="server"  placeholder="Url of the website" type="url"></asp:TextBox>
     </div>
+<asp:Button ID="BookingButton" runat="server" Text="Add Account" onclick="addAccountButtonClicked" />
 </div>
-</form>
+
 
 
 </asp:Content>

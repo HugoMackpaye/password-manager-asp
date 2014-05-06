@@ -17,7 +17,7 @@
         <asp:BoundField DataField="username" HeaderText="username" 
             SortExpression="username" />
         <asp:BoundField DataField="url" HeaderText="url" SortExpression="url" />
-        <asp:BoundField DataField="login" HeaderText="login" SortExpression="login" />
+        <asp:BoundField DataField="userLogin" HeaderText="userLogin" SortExpression="userLogin" />
     </Columns>
 </asp:GridView>
 
@@ -25,7 +25,7 @@
 
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-    SelectCommand="SELECT name, description, password, Account.username, url, login 
+    SelectCommand="SELECT name, description, password, Account.username, url 
                    FROM Account, aspnet_Users
                    WHERE Account.userLogin = aspnet_Users.UserName
                    AND aspnet_Users.UserName = @UserName">
