@@ -20,9 +20,16 @@
         <asp:BoundField DataField="login" HeaderText="login" SortExpression="login" />
     </Columns>
 </asp:GridView>
+
+<h1> <%= Page.User.Identity.Name %></h1>
+
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-    SelectCommand="SELECT [name], [description], [password], [username], [url], [login] FROM [Account] ORDER BY [name]">
+    SelectCommand="SELECT name, description, password, Account.username, url, login 
+                   FROM Account, aspnet_Users
+                   WHERE Account.userLogin = aspnet_Users.UserName
+                   AND aspnet_Users.UserName = @UserName">
+
 </asp:SqlDataSource>
     
 
