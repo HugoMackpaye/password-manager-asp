@@ -114,3 +114,11 @@ h4.monoline
 {
  text-align :justify;   
 }
+
+#buttoncontent 
+{
+    width :16%;
+    position : relative;
+    float:left;
+    left : 16%;
+}

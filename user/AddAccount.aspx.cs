@@ -24,7 +24,9 @@ public partial class user_AddAccount : System.Web.UI.Page
 
         // The SQL statement to insert a booking. By using prepared statements,
         // we automatically get some protection against SQL injection.
-        string sqlStr = "INSERT INTO Account VALUES (@id, @name, @description, @password, @url, @login, @userLogin)";
+        // The SQL statement to insert a booking. By using prepared statements,
+        // we automatically get some protection against SQL injection.
+        string sqlStr = "INSERT  INTO  Account (name,description,password,url,userName,userLogin) VALUES (@name, @description, @password, @url, @userNameforAnAccount, @userLogin)";
 
         // Open the database connection
         con.Open();
@@ -33,18 +35,17 @@ public partial class user_AddAccount : System.Web.UI.Page
         SqlCommand sqlCmd = new SqlCommand(sqlStr, con);
 
         // Fill in the parameters in our prepared SQL statement
-        sqlCmd.Parameters.AddWithValue("@id", 5);
+
         sqlCmd.Parameters.AddWithValue("@userLogin", this.User.Identity.Name);
 
-        sqlCmd.Parameters.AddWithValue("@name", TextBox1.Text );
-        sqlCmd.Parameters.AddWithValue("@description", TextBox2.Text );
-        sqlCmd.Parameters.AddWithValue("@login", TextBox4.Text);
-        sqlCmd.Parameters.AddWithValue("@password", TextBox3.Text );
-        sqlCmd.Parameters.AddWithValue("@url", TextBox5.Text);
-       
+        sqlCmd.Parameters.AddWithValue("@name", TextBox1.Text);
+        sqlCmd.Parameters.AddWithValue("@description", TextBox2.Text);
+        sqlCmd.Parameters.AddWithValue("@userNameforAnAccount", TextBox4.Text);
+        sqlCmd.Parameters.AddWithValue("@password", TextBox3.Text);
+        sqlCmd.Parameters.AddWithValue("@url",TextBox5.Text);
         
-
-
+       
+      
         // Execute the SQL command
         sqlCmd.ExecuteNonQuery();
 

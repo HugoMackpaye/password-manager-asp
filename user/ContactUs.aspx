@@ -9,10 +9,10 @@
         
 
      
-        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Email" runat="server" required type="email"></asp:TextBox><br />
+        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Email" runat="server" required type="mail"></asp:TextBox><br />
         <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" placeholder="Subject" runat="server" required type="Subject"></asp:TextBox><br />
-        <asp:TextBox ID="TextBox3" runat="server" Rows="3" CssClass="form-control" placeholder="Your question ..." runat="server" required type="email"></asp:TextBox><br />
-        <asp:Button ID="Button1" runat="server" Text="Send" CssClass="btn btn-lg btn-primary btn-block" />
+        <asp:TextBox ID="TextBox3" runat="server" Rows="3" CssClass="form-control" placeholder="Your question ..." runat="server" required type="text"></asp:TextBox><br />
+        <asp:Button ID="Button1" runat="server" Text="Send" CssClass="btn btn-lg btn-primary btn-block" OnClick="buttonSentClicked" />
         <asp:Label ID="Label1" runat="server">
             
        
