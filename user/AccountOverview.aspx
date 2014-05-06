@@ -26,7 +26,7 @@
         <td><%# Eval("password") %></td>
         <td><%# Eval("username") %></td>
         <td><%# Eval("url") %></td>
-        <td><%# Eval("login") %></td>
+       
         <td><asp:LinkButton ID="LinkButtonDelete" OnCommand="AccountDelete" CommandArgument=<%# Eval("id") %> runat="server" CommandName="AccId"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton></td>
         <td><asp:LinkButton ID="LinkButtonEdit" OnCommand="AccountEdit" CommandArgument=<%# Eval("id") %> runat="server" CommandName="AccId"><span class="glyphicon glyphicon-pencil"></span></asp:LinkButton></td>
       </tr>
@@ -47,7 +47,7 @@
             <th>Password</th>
             <th>Username</th>
             <th>Url</th>
-            <th>Login</th>
+            <th>Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -58,14 +58,17 @@
         </table>
          
 
+
       </LayoutTemplate>
    </asp:ListView>
 
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-    SelectCommand="SELECT a.id, a.name, a.description, a.password, a.username, a.url, a.login 
+
+    SelectCommand="SELECT a.id, a.name, a.description, a.password, a.username, a.url 
                    FROM Account AS a WHERE
                    a.userLogin = @UserName">
+
 
 </asp:SqlDataSource>
     
