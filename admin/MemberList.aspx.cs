@@ -14,6 +14,7 @@ public partial class admin_memberList : System.Web.UI.Page
         if (!IsPostBack)
         {
             DeleteSuccess.Visible = false;
+            DeleteConfirm.Visible = false;
         }
     }
 
