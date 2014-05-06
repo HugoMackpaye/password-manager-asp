@@ -7,8 +7,9 @@
 
    <asp:Login ID="Login1" runat="server" Font-Names="Verdana"  
         Font-Size="10pt" DestinationPageUrl="~/Default.aspx" 
-        DisplayRememberMe="False">
+        DisplayRememberMe="False" >
       <TitleTextStyle BackColor="#6B696B" Font-Bold="True" ForeColor="#FFFFFF" />
+      <LoginButtonStyle CssClass="btn btn-primary .button" />
    </asp:Login> 
 
 <!--
