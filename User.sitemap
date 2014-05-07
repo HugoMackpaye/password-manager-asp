@@ -6,5 +6,6 @@
     <siteMapNode url="user/ManageAccount.aspx" title="Manage my account"  description="" />
     <siteMapNode url="user/About.aspx" title="About"  description="" />
     <siteMapNode url="user/ContactUs.aspx" title="Contact us"  description="" />
+    <siteMapNode url="auth/Logout.aspx" title="Logout" description="" />
   </siteMapNode>
 </siteMap>

@@ -24,8 +24,8 @@
   <span class="glyphicon glyphicon-tower"></span> Change my password
 </button></a> <br /> <br />
 
-<a href="ChangeMail.aspx"><button type="button" class="btn btn-default btn-lg" >
-  <span class="glyphicon glyphicon-send"></span>    Change my mail adress 
+<a href="ChangeEmail.aspx"><button type="button" class="btn btn-default btn-lg" >
+  <span class="glyphicon glyphicon-send"></span>    Change my email address 
 </button></a> <br /> <br />
 
 

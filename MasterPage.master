@@ -67,8 +67,10 @@
                StaticEnableDefaultPopOutImage="False"   
                StaticHoverStyle-ForeColor="White" StaticSelectedStyle-ForeColor="#88a4f8" ForeColor="white" Style="padding-top:15px"
               StaticMenuItemStyle-HorizontalPadding="30" >
-
+               
             </asp:Menu>     
+            
+           
                      </ContentTemplate>
                   </asp:RoleGroup>
 
@@ -77,15 +79,9 @@
                
 
 
-
+               
              </asp:LoginView>
-
-
-            <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="menunode">
-        </asp:LoginStatus>
-
-
-         
+        
         </div><!--/.nav-collapse -->
     
       </div>

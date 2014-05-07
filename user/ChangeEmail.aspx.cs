@@ -22,6 +22,7 @@ public partial class user_ChangeEmail : System.Web.UI.Page
 
     protected void SaveChanges(Object sender, CommandEventArgs e)
     {
+        
         MembershipUser mu = Membership.GetUser();
         if (mu.ChangePasswordQuestionAndAnswer(Password.Text, Question.Text, Answer.Text))
         {

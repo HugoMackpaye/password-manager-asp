@@ -3,5 +3,7 @@
     <siteMapNode url="admin/MemberList.aspx" title="MemberList"  description="">
         <siteMapNode url="admin/AddUser.aspx" title="AddUser"  description="" />
         <siteMapNode url="admin/Questions.aspx" title="Questions"  description="" />
+      <siteMapNode url="auth/Logout.aspx" title="Logout" description=""></siteMapNode>
     </siteMapNode>
-</siteMap>
+
+  </siteMap>
