@@ -10,7 +10,7 @@
 
 <div id="left"> <div><b>My account </b>:</div>
 <br />
-<div id="avatar"><img src="../pictures/avatar.png" alt="..." class="img-thumbnail"></div>
+<div id="avatar"><asp:Image ID="ImgAvatar" Width="100px" runat="server" /></div>
 <div id="contentnextavatar"><b>Login </b>: foulo005 <br />
 <b>Password</b> : ******* <br />
 <b>Mail adress</b> : nicolas.foulon2@hotmail.fr <br />
